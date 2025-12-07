@@ -119,16 +119,19 @@ function resetGame() {
     document.getElementById("winnerModal").style.display = "none";
 }
 
+// ... (Toda tu lógica de juego, minimax, resetGame, etc.)
+
 // ------------------------------------
-// 👥 FUNCIONES MODAL INTEGRANTES
+// 👥 FUNCIONES MODAL INTEGRANTES (NUEVO CÓDIGO A AGREGAR)
 // ------------------------------------
 
 function salir() {
-    // Abre el modal de integrantes y lo centra
+    // Función que se llama al hacer clic en el botón 'Salir'.
+    // Muestra el modal de integrantes.
     document.getElementById("integrantesModal").style.display = "flex";
 }
 
 function closeIntegrantes() {
-    // Cierra el modal y mantiene el juego en curso
+    // Función que se llama para cerrar el modal de integrantes.
     document.getElementById("integrantesModal").style.display = "none";
 }
