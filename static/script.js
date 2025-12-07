@@ -118,3 +118,17 @@ function resetGame() {
 
     document.getElementById("winnerModal").style.display = "none";
 }
+
+// ------------------------------------
+// 👥 FUNCIONES MODAL INTEGRANTES
+// ------------------------------------
+
+function salir() {
+    // Abre el modal de integrantes y lo centra
+    document.getElementById("integrantesModal").style.display = "flex";
+}
+
+function closeIntegrantes() {
+    // Cierra el modal y mantiene el juego en curso
+    document.getElementById("integrantesModal").style.display = "none";
+}
