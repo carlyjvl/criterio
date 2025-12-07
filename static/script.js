@@ -25,6 +25,9 @@ function playerMove() {
     const index = this.dataset.index;
 
     if (board[index] !== "") return;
+    
+    // 1. Obtener la dificultad seleccionada
+    const difficulty = document.getElementById("dificultad").value; 
 
     s_click.play();
     board[index] = "X";
@@ -35,7 +38,10 @@ function playerMove() {
     fetch("/move", {
         method: "POST",
         headers: {"Content-Type": "application/json"},
-        body: JSON.stringify({ board })
+        body: JSON.stringify({ 
+            board: board,
+            difficulty: difficulty // <--- ENVÍA LA DIFICULTAD AL SERVIDOR
+        })
     })
     .then(res => res.json())
     .then(data => {
@@ -47,6 +53,7 @@ function playerMove() {
         checkEndGame();
     });
 }
+
 
 function getWinnerCombo() {
     const combos = [
@@ -135,3 +142,4 @@ function closeIntegrantes() {
     // Función que se llama para cerrar el modal de integrantes.
     document.getElementById("integrantesModal").style.display = "none";
 }
+// ... (Toda la lógica inicial de script.js, variables, window.onload, etc.)

@@ -168,6 +168,17 @@
     </div>
 </body>
     <!-- MODAL GANADOR -->
+     <h1>Tres en Raya con Minimax</h1>
+
+    <div style="margin-bottom: 20px;">
+        <label for="dificultad" style="font-size: 18px; margin-right: 10px;">Dificultad de la IA:</label>
+        <select id="dificultad" onchange="resetGame()" style="padding: 8px; border-radius: 8px; color: #764ba2; font-weight: 600;">
+            <option value="easy">Fácil</option>
+            <option value="normal">Normal</option>
+            <option value="expert" selected>Experto (Perfecto)</option>
+        </select>
+    </div>
+    <div class="board" id="board"></div>
     <div id="winnerModal">
         <div id="winnerBox">
             <div id="winnerText"></div>
